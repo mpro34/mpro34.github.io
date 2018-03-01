@@ -1,3 +1,10 @@
-body {
+/* body {
 	background-color: #528b8b;
-}
+} */
+html {
+	 font-family: GillSans, Calibri, Trebuchet, sans-serif;
+ }
+
+ h2 {
+	 font-weight: bold;
+ }
