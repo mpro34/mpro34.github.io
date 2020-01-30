@@ -8,6 +8,22 @@
       <link type="text/css" rel="stylesheet" href="css/styles.css" media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+      <script type="text/javascript">
+        $(function(){
+            $('#button1').click(function(){ 
+                if(!$('#iframe').length) {
+                        $('#iframeHolder').html('<iframe id="iframe" src="gl_zombies/zGame.html" width="450" height="450"></iframe>');
+                }
+            });   
+        });
+        $(function(){
+            $('#button2').click(function(){ 
+                var getframe = document.getElementById("iframe");
+                getframe.remove();
+            });   
+        });
+      </script>
     </head>
 
     <body>
@@ -99,7 +115,13 @@
       </div>
     </li>
   </ul>
-  <div class="col s5 offset-s2"><h2> Christopher Whiting </h2><h3> Software Engineer </h3></div>
+  <div class="col s5 offset-s2"><h2> Christopher Whiting </h2><h4> Software Engineer </h4></div>
+  <div class="col s5 offset-s1">
+    <button id="button1">Play</button>
+    <button id="button2">Stop</button>
+    <p> WebGL Zombies, my first attempt at a game. (May take a little bit to load.)</p>
+    <div id="iframeHolder"></div>
+  </div>
 </div>
 
       <!--Import jQuery before materialize.js-->
